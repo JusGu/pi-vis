@@ -76,7 +76,7 @@ function TopCard({setInside, setOutside, inside, outside}){
     }
     return(
         <div className="TopCard">
-            <a href="https://en.wikipedia.org/wiki/Monte_Carlo_method#:~:text=Given%20that%20the%20ratio%20of,origin%20of%20less%20than%201" target="_blank"><h3>Monte Carlo Estimate</h3></a>
+            <a href="https://github.com/JusGu/pi-vis/blob/main/README.md" target="_blank"><h3>Monte Carlo Estimate</h3></a>
             <GraphPI 
             onMouseDown={handleGraph} 
             onMouseLeave={timeoutClear}
