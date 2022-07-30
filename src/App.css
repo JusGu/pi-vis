@@ -15,7 +15,7 @@
 
 .App-header {
   font-family: 'NexaHeavy';
-  background-color: var(--bg);
+  background: rgb(11,19,56);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,133 @@
   color: var(--text);
 }
 
-.App-link {
-  color: #61dafb;
+.pi-icon{
+  height: calc(10px + 2vmin);
 }
 
+.TopCard{
+  background-color: var(--card);
+  padding: 0vmin 7vmin 0vmin 7vmin;
+  border-radius: 25px;
+  box-shadow: 0 7px var(--pink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  margin-top: 3vmin;
+}
+.TopCard a {
+  text-decoration: none;
+}
+.TopCard h3 {
+  margin-bottom: 3vmin;
+  cursor: pointer;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.TopCard h3:hover {
+  text-decoration-color: var(--pink);
+  text-decoration: underline;
+}
+
+
+.GraphBorder{
+  border: 5px solid var(--pink);
+  border-radius: 5px;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.GraphRadius{
+  border: 5px solid var(--pink);
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  border-radius: 1600px;
+  left: -407px;
+  top:-2px;
+  opacity: 50%;
+  z-index: 1;
+}
+.dot{
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  
+  border-radius: 10px;
+  animation: grow;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  opacity: 50%;
+  z-index: 0;
+}
+
+.whiteDot{
+  background-color: var(--text);
+}
+
+.pinkDot{
+  background-color: var(--pink);
+}
+
+.purpleDot{
+  background-color: var(--purple);
+}
+
+.blueDot{
+  background-color: var(--blue);
+}
+
+
+@keyframes grow {
+  from {
+    transform: scale(0);
+  }
+  65%{
+    transform: scale(3);
+    opacity: 100%;
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.tip{
+  font-size: 16px;
+  opacity: 50%;
+  margin-bottom: -30px;
+  padding: 0px;
+  transition: 0.3s all ease;
+}
+
+.BottomCard{
+  background-color: var(--card);
+  padding: 0vmin 7vmin 3vmin 7vmin;
+  border-radius: 25px;
+  box-shadow: 0 7px var(--pink);
+  width: 400px;
+  margin-top: 3vmin;
+  margin-bottom: 3vmin;
+  
+}
+.stat-wrapper{
+  display: flex;
+  gap: 4rem;
+}
+.BottomCard > h3 {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.stat > *{
+  display: flex;
+  justify-content: left;
+}
+.stat-heading{
+  opacity: 50%;
+}
